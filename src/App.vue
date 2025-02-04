@@ -1,11 +1,5 @@
 <template>
-  <header>
-    <div class="nav">
-      <router-link to="/">
-        Home
-      </router-link>
-    </div>
-  </header>
+  <AppHeader />
   <main>
     <router-view />
   </main>
@@ -13,9 +7,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import AppHeader from './components/layout/AppHeader.vue';
 
 export default defineComponent({
   name: 'App',
+  components: { AppHeader },
 })
 </script>
 
