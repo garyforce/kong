@@ -1,0 +1,105 @@
+.service-catalog {
+  margin: 5rem auto;
+  padding: 0 2.5rem;
+
+  .header {
+    align-items: start;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .title-container {
+      .title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 3.6rem;
+        margin: 0;
+      }
+
+      .subtitle {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        margin: 1.6rem 0 0 0;
+      }
+    }
+
+    .input-container {
+      align-items: center;
+      display: flex;
+      gap: 2.5rem;
+
+      label {
+        position: relative;
+      }
+
+      label:before {
+        background: url("/icons/magnifier.svg") center / contain no-repeat;
+        bottom: 0;
+        content: "";
+        height: 4rem;
+        left: 1rem;
+        position: absolute;
+        top: 0;
+        width: 2rem;
+      }
+
+      .search-input {
+        background-color: #ffffff;
+        border: 1px solid #e7e7ec;
+        border-radius: 0.4rem;
+        padding: 1rem 1.6rem;
+        padding-left: 3rem;
+        width: 21rem;
+      }
+    }
+  }
+
+  .no-results {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-top: 30rem;
+    text-align: center;
+  }
+
+  .service-card-skeleton-loader {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background: gainsboro;
+    border-radius: 0.2rem;
+    height: 24rem;
+    width: 42rem;
+
+    @keyframes pulse {
+      50% {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-block: 2.5rem;
+}
+
+.service-card {
+  align-self: auto;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 2px rgba(40, 41, 61, 0.04),
+    0px 4px 8px rgba(96, 97, 112, 0.16);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 24rem;
+  padding: 2rem;
+  width: 42rem;
+}

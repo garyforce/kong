@@ -1,0 +1,37 @@
+.card-header {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  line-height: 1.5rem;
+
+  .versions {
+    background-color: #f2f6fe;
+    border-radius: 10rem;
+    color: #5888db;
+    font-weight: 600;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #707888;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.card-footer {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    margin: 0;
+  }
+}
