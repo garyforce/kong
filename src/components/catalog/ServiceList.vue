@@ -85,7 +85,7 @@
 import { defineComponent, watch, onBeforeMount, markRaw, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { type ServiceType } from '@/types/appTypes'
-import useDebouncedRef from '@/composables/useDebouncedRef'
+import useDebouncedState from '@/composables/useDebouncedState'
 import useServices from '@/composables/useServices'
 import useModal from '@/composables/useModal'
 import useGetPaginatedData from '@/composables/useGetPaginatedData'
@@ -126,7 +126,7 @@ export default defineComponent({
     }
 
     // Set the search string to a Vue ref - debounced to 300ms
-    const searchQuery = useDebouncedRef('', 300)
+    const searchQuery = useDebouncedState('', 300)
     // Ref to hold the selected service data
     const selectedServiceData = ref<ServiceType | undefined>()
 
