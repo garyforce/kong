@@ -139,6 +139,7 @@ export default defineComponent({
     } = useGetPaginatedData(services)
 
     watch(searchQuery, (newQuery) => {
+      console.log(searchQuery)
       // Fetch services based on queryParam
       getServices(newQuery)
       if (newQuery) {
