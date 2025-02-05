@@ -7,6 +7,5 @@ import { formatTimeAgo } from '@vueuse/core'
  * @returns - A human-readable time difference string (e.g., "2 minutes ago").
  */
 export const getFormattedTime = (updated_at: string): string => {
-  console.log(updated_at)
   return formatTimeAgo(new Date(updated_at))
 }
